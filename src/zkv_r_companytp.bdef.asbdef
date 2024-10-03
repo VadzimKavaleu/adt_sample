@@ -1,0 +1,37 @@
+managed;
+strict ( 2 );
+
+define behavior for ZKV_R_COMPANYTP alias Company
+implementation in class ZCL_COMPANY unique
+persistent table zkvcompany
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( readonly, numbering : managed ) Companyuuid;
+  association _Employee { create; }
+  mapping for zkvcompany corresponding;
+
+  action (features : instance ) AcceptCompany result [1] $self;
+  action (features : instance ) RejectCompany result [1] $self;
+  action CreateCompanyByTemplate result [1] $self;
+  action AddDescription parameter ZKDESCP result [1] $self;
+}
+
+define behavior for ZKV_R_EMPLOYEETP alias Employee
+implementation in class ZCL_EMPLOYEE unique
+persistent table zkvemployee
+lock dependent by _Company
+authorization dependent by _Company
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly, numbering : managed ) Employeeuuid;
+  field (readonly) Companyuuid;
+  association _Company;
+  mapping for zkvemployee corresponding;
+}

@@ -1,0 +1,40 @@
+@Metadata.layer: #CORE
+annotate entity ZKV_C_COMPANYTP with
+{
+  @UI.facet: [{ label: 'Company',
+            position: 1,
+            type: #IDENTIFICATION_REFERENCE },
+            { label: 'Employee',
+            position: 2,
+            type: #LINEITEM_REFERENCE,
+            targetElement: '_Employee' }]
+  @UI.hidden: true
+  @UI.lineItem: [{ type:#FOR_ACTION, dataAction: 'CreateCompanyByTemplate', label: 'CreateCompanyByTemplate', position: 10 },
+                 { type: #FOR_ACTION, dataAction: 'AcceptCompany', label: 'AcceptCompany', position: 20 },
+                 { type:#FOR_ACTION, dataAction: 'RejectCompany', label: 'RejectCompany', position: 30 }]
+  Companyuuid;
+  @UI:{ lineItem: [{ position: 10, label: 'CompanyID' }],
+        identification: [{ position: 10, label: 'CompanyID' }] }
+
+  Companyid;
+  @UI:{ lineItem: [{ position: 20, label: 'CompanyName' }],
+        identification: [{ position: 20, label: 'CompanyName' }],
+        selectionField: [{ position: 10 }] }
+  Companyname;
+  @UI:{ lineItem: [{ position: 30, label: 'City' }],
+        identification: [{ position: 30, label: 'City' }] }
+  City;
+  @UI:{ lineItem: [{ position: 40, label: 'Phone' }],
+        identification: [{ position: 40, label: 'Phone' }] }
+  Phone;
+  @UI:{ lineItem: [{ position: 50, label: 'Capacity' }],
+        identification: [{ position: 50, label: 'Capacity' }] }
+  Capacity;
+  @UI:{ lineItem: [{ position: 60, label: 'Status' }],
+        identification: [{ position: 60, label: 'Status' }] }
+  Status;
+  @UI:{ lineItem: [{ position: 70, label: 'Description' }],
+        identification: [{ position: 70, label: 'Description' }] }
+  Description;
+
+}

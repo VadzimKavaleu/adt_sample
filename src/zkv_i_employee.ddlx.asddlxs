@@ -1,0 +1,26 @@
+@Metadata.layer: #CORE
+annotate entity ZKV_I_EMPLOYEE with
+{
+@UI.facet: [{ label: 'Employee',
+              type: #IDENTIFICATION_REFERENCE }]
+  @UI.hidden: true
+  Employeeuuid;
+  @UI.hidden: true
+  Companyuuid;
+  @UI:{ lineItem: [{ position: 10, label: 'EmployeeID' }],
+        identification: [{ position: 10, label: 'EmployeeID' }] }
+  Emloyeeid;
+  @UI:{ lineItem: [{ position: 20, label: 'FirstName' }],
+        identification: [{ position: 20, label: 'FirstName' }] }
+  Firstname;
+  @UI:{ lineItem: [{ position: 30, label: 'SecondName' }],
+        identification: [{ position: 30, label: 'SecondName' }] }
+  Secondname;
+  @UI:{ lineItem: [{ position: 40, label: 'Age' }],
+        identification: [{ position: 40, label: 'Age' }] }
+  Age;
+  @UI:{ lineItem: [{ position: 50, label: 'Experience' }],
+        identification: [{ position: 50, label: 'Experience' }] }
+  Experience;
+
+}

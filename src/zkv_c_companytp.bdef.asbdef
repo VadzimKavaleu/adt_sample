@@ -1,0 +1,24 @@
+projection;
+strict ( 2 );
+
+define behavior for ZKV_C_COMPANYTP alias Company
+{
+  use create;
+  use update;
+  use delete;
+
+  use action AcceptCompany;
+  use action RejectCompany;
+  use action CreateCompanyByTemplate;
+  use action AddDescription;
+
+  use association _Employee { create; }
+}
+
+define behavior for ZKV_C_EMPLOYEETP alias Employee
+{
+  use update;
+  use delete;
+
+  use association _Company;
+}

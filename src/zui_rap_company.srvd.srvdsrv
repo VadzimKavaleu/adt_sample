@@ -1,0 +1,6 @@
+@EndUserText.label: 'Service Definition'
+define service ZUI_RAP_COMPANY {
+  expose ZKV_I_COMPANY  as Company;
+  expose ZKV_I_EMPLOYEE as Employee;
+  expose ZKV_I_INFO     as Info;
+}
