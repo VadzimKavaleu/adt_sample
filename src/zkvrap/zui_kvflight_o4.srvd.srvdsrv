@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_KVFLIGHT'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_KVFLIGHT'
+  }
+}
+define service ZUI_KVFLIGHT_O4 provider contracts odata_v4_ui {
+  expose ZC_KVFLIGHT;
+}

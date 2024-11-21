@@ -1,0 +1,197 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Uuid'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Uuid'
+annotate view ZC_KVFLIGHT with
+{
+  @EndUserText.label: 'Uuid'
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'UUID'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'UUID'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  Uuid;
+  
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'Airline ID'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label: 'Airline ID'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  Carrid;
+  
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Flight Number'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 , 
+    label: 'Flight Number'
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  Connid;
+  
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'Departure Airport'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 , 
+    label: 'Departure Airport'
+  } ]
+  @UI.selectionField: [ {
+    position: 40 
+  } ]
+  AirportFrom;
+  
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'City'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 , 
+    label: 'City'
+  } ]
+  @UI.selectionField: [ {
+    position: 50 
+  } ]
+  CityFrom;
+  
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'Land/Region'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 , 
+    label: 'Land/Region'
+  } ]
+  @UI.selectionField: [ {
+    position: 60 
+  } ]
+  CountryFrom;
+  
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'Destination Airport'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 , 
+    label: 'Destination Airport'
+  } ]
+  @UI.selectionField: [ {
+    position: 70 
+  } ]
+  AirportTo;
+  
+  @UI.identification: [ {
+    position: 80 , 
+    label: 'City'
+  } ]
+  @UI.lineItem: [ {
+    position: 80 , 
+    label: 'City'
+  } ]
+  @UI.selectionField: [ {
+    position: 80 
+  } ]
+  CityTo;
+  
+  @UI.identification: [ {
+    position: 90 , 
+    label: 'Land/Region'
+  } ]
+  @UI.lineItem: [ {
+    position: 90 , 
+    label: 'Land/Region'
+  } ]
+  @UI.selectionField: [ {
+    position: 90 
+  } ]
+  CountryTo;
+  
+  @UI.identification: [ {
+    position: 100 , 
+    label: 'Created By'
+  } ]
+  @UI.lineItem: [ {
+    position: 100 , 
+    label: 'Created By'
+  } ]
+  @UI.selectionField: [ {
+    position: 100 
+  } ]
+  LocalCreatedBy;
+  
+  @UI.identification: [ {
+    position: 110 , 
+    label: 'Created On'
+  } ]
+  @UI.lineItem: [ {
+    position: 110 , 
+    label: 'Created On'
+  } ]
+  @UI.selectionField: [ {
+    position: 110 
+  } ]
+  LocalCreatedAt;
+  
+  @UI.identification: [ {
+    position: 120 , 
+    label: 'Changed By'
+  } ]
+  @UI.lineItem: [ {
+    position: 120 , 
+    label: 'Changed By'
+  } ]
+  @UI.selectionField: [ {
+    position: 120 
+  } ]
+  LocalLastChangedBy;
+  
+  @UI.identification: [ {
+    position: 130 , 
+    label: 'Changed On'
+  } ]
+  @UI.lineItem: [ {
+    position: 130 , 
+    label: 'Changed On'
+  } ]
+  @UI.selectionField: [ {
+    position: 130 
+  } ]
+  LocalLastChangedAt;
+  
+  @UI.identification: [ {
+    position: 140 , 
+    label: 'Changed On'
+  } ]
+  @UI.lineItem: [ {
+    position: 140 , 
+    label: 'Changed On'
+  } ]
+  @UI.selectionField: [ {
+    position: 140 
+  } ]
+  LastChangedAt;
+}
